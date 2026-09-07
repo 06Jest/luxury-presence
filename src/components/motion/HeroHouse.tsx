@@ -258,21 +258,13 @@ function Ground({ weatherRef }: { weatherRef: WeatherRef }) {
       />
     </mesh>
 
-    {/* driveway, leading to the garage */}
-    <mesh
-      rotation={[-Math.PI / 2, 0, 0]}
-      position={[-2.9, 0.005, 5.2]}
-    >
-      <planeGeometry args={[2.6, 6]} />
-      <meshStandardMaterial color="#b7ada0" roughness={0.85} />
-    </mesh>
 
     {/* front walkway, leading to the entry */}
     <mesh
       rotation={[-Math.PI / 2, 0, 0]}
       position={[-0.5, 0.005, 4]}
     >
-      <planeGeometry args={[1.1, 4]} />
+      <planeGeometry args={[1.1, 2]} />
       <meshStandardMaterial color="#c7bfae" roughness={0.85} />
     </mesh>
   </group>
