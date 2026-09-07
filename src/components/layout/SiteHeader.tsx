@@ -43,17 +43,27 @@ export function SiteHeader() {
       <Container className="flex h-20 items-center justify-between gap-4">
         <Link
           href="#top"
-          className={`font-serif text-base leading-tight tracking-tight transition-colors duration-500 sm:text-lg ${
-            solid ? "text-ink-900" : "text-sand-50"
-          }`}
+          className="flex items-center gap-3"
         >
-          {site.agent}
+          <img
+            src="/images/marci-metzger-logo.png"
+            alt="Marci Metzger"
+            className="h-11 w-11 rounded-full object-cover"
+          />
+
           <span
-            className={`eyebrow block text-[0.5625rem] ${
-              solid ? "text-ink-500" : "text-sand-50/75"
+            className={`font-serif text-base leading-tight tracking-tight transition-colors duration-500 sm:text-lg ${
+              solid ? "text-ink-900" : "text-sand-50"
             }`}
           >
-            {site.brokerage}
+            {site.agent}
+            <span
+              className={`eyebrow block text-[0.5625rem] ${
+                solid ? "text-ink-500" : "text-sand-50/75"
+              }`}
+            >
+              {site.brokerage}
+            </span>
           </span>
         </Link>
 
