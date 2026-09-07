@@ -8,6 +8,7 @@ import { PropertySearch } from "@/components/sections/PropertySearch";
 import { Services } from "@/components/sections/Services";
 import { TrackRecord } from "@/components/sections/TrackRecord";
 import { Testimonials } from "@/components/sections/Testimonials";
+import { TrustLogos } from "@/components/sections/TrustLogos";
 import Chatbot from "@/components/sections/ChatBox";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
         <PropertySearch />
         <Gallery />
         <Services />
+        <TrustLogos />
         <Testimonials />
         <ContactVisit />
       </main>

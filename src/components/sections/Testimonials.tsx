@@ -30,36 +30,112 @@ interface Testimonial {
  */
 const TESTIMONIALS: Testimonial[] = [
   {
-    id: "desiree",
-    name: "Desiree Barragan-Reich",
-    role: "Client review · 2016",
-    rating: 4,
-    quote: "I would recommend Marci Metzger.",
-    sourceLabel: "Check source →",
+    id: "brent-r",
+    name: "Brent R.",
+    role: "Client · Yelp · 2024",
+    rating: 5,
+    quote:
+      "Marci is by far the most professional realtor I have ever worked with. I have purchased about 15 homes in all and have had many different realtors involved in the transactions. Mostly good experiences but none compare to the professionalism that was given by Marci.",
+    sourceLabel: "View on Yelp →",
     sourceUrl:
-      "https://www.driggstitle.com/reviews/Marci_Metzger/4775_E_Lorenzo_Pahrump_89061_5.html",
+      "https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump",
     width: "lg",
     offset: "none",
   },
+
   {
-    id: "anonymous-client",
-    name: "Anonymous client",
-    role: "Client review",
+    id: "cheryl-t",
+    name: "Cheryl T.",
+    role: "Client · Yelp · 2025",
+    rating: 5,
     quote:
-      "Marci is the BEST! Prompt, organized, informative and most helpful! Did an excellent job in selling our home!",
-    sourceLabel: "Check source →",
-    sourceUrl: "https://industryoversight.com/realtors/pahrump-nye-nv/",
+      "Very professional and knowledgeable. Trying to price your home right the first time when listing. Would recommend her and her company.",
+    sourceLabel: "View on Yelp →",
+    sourceUrl:
+      "https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump",
     width: "base",
     offset: "none",
   },
+
   {
-    id: "roy-mccann",
-    name: "Roy McCann",
-    role: "California & Nevada Real Estate Broker",
-    quote: "She's a professional.",
-    sourceLabel: "Check source →",
+    id: "teresa-l",
+    name: "Teresa L.",
+    role: "Client · Yelp · 2022",
+    rating: 5,
+    quote:
+      "Professional, friendly and knows her profession well. Pahrump is lucky to have her 30+ years of experience.",
+    sourceLabel: "View on Yelp →",
     sourceUrl:
-      "https://www.linkedin.com/posts/roy-mccann_i-am-a-california-and-nevada-real-estate-activity-7403155295939780610-JptK",
+      "https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump",
+    width: "lg",
+    offset: "none",
+  },
+
+  {
+    id: "tina-h",
+    name: "Tina H.",
+    role: "Client · Yelp · 2017",
+    rating: 5,
+    quote:
+      "I had a weekend to find a home to buy. She actually found TWO homes that fit my needs - neither were active listings!",
+    sourceLabel: "View on Yelp →",
+    sourceUrl:
+      "https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump",
+    width: "lg",
+    offset: "none",
+  },
+
+  {
+    id: "james-d",
+    name: "James D.",
+    role: "Professional endorsement · Yelp · 2018",
+    rating: 5,
+    quote:
+      "Real estate agent with all the polish and professionalism you need! Knowledgeable, and so helpful... every step of the way! Top pick for Pahrump!",
+    sourceLabel: "View on Yelp →",
+    sourceUrl:
+      "https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump",
+    width: "base",
+    offset: "none",
+  },
+
+  {
+    id: "shannon-k",
+    name: "Shannon K.",
+    role: "Client · Yelp · 2019",
+    rating: 5,
+    quote:
+      "Marci and Lauren are an amazing team. They are very knowledgeable about real estate and the important details that make home shopping easier and better for their clients.",
+    sourceLabel: "View on Yelp →",
+    sourceUrl:
+      "https://www.yelp.com/biz/marci-metzger-the-ridge-realty-pahrump",
+    width: "lg",
+    offset: "none",
+  },
+
+  {
+    id: "desiree",
+    name: "Desiree Barragan-Reich",
+    role: "Client review · Driggs Title · 2016",
+    rating: 4,
+    quote: "I would recommend Marci Metzger.",
+    sourceLabel: "View source →",
+    sourceUrl:
+      "https://www.driggstitle.com/reviews/Marci_Metzger/4775_E_Lorenzo_Pahrump_89061_5.html",
+    width: "base",
+    offset: "none",
+  },
+
+  {
+    id: "anonymous-client",
+    name: "Anonymous client",
+    role: "Client review · IndustryOversight",
+    rating: 5,
+    quote:
+      "Marci is the BEST! Prompt, organized, informative and most helpful! Did an excellent job in selling our home!",
+    sourceLabel: "View source →",
+    sourceUrl:
+      "https://industryoversight.com/realtors/pahrump-nye-nv/",
     width: "lg",
     offset: "none",
   },
