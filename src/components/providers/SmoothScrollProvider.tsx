@@ -4,9 +4,12 @@ import { useEffect, type ReactNode } from "react";
 import Lenis from "lenis";
 
 import { gsap, ScrollTrigger } from "@/lib/gsap";
+import { prefersReducedMotion } from "@/lib/motion";
 
 export function SmoothScrollProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
+    if (prefersReducedMotion()) return;
+
     const lenis = new Lenis({ autoRaf: false });
 
     lenis.on("scroll", ScrollTrigger.update);
