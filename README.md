@@ -6,7 +6,7 @@ The project reimagines the original homepage with a more editorial, immersive re
 
 ## Live Demo
 
-(Production:](https://luxury-presence-nine.vercel.app/))
+(Production:](https://luxury-presence-nine.vercel.app/)
 
 ## Overview
 
