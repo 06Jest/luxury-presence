@@ -10,7 +10,7 @@ export function SmoothScrollProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (prefersReducedMotion()) return;
 
-    const lenis = new Lenis({ autoRaf: false });
+    const lenis = new Lenis({ autoRaf: false, anchors: true });
 
     lenis.on("scroll", ScrollTrigger.update);
 

@@ -7,6 +7,8 @@ import { Intro } from "@/components/sections/Intro";
 import { PropertySearch } from "@/components/sections/PropertySearch";
 import { Services } from "@/components/sections/Services";
 import { TrackRecord } from "@/components/sections/TrackRecord";
+import { Testimonials } from "@/components/sections/Testimonials";
+import Chatbot from "@/components/sections/ChatBox";
 
 export default function Home() {
   return (
@@ -19,8 +21,10 @@ export default function Home() {
         <PropertySearch />
         <Gallery />
         <Services />
+        <Testimonials />
         <ContactVisit />
       </main>
+      <Chatbot />
       <SiteFooter />
     </>
   );

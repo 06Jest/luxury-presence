@@ -16,6 +16,8 @@ type ParallaxImageProps = {
   priority?: boolean;
   /** Drift as a share of the image height; the image is overscaled to match. */
   amount?: number;
+  /** One-time clip-path wipe + scale-down as the frame enters view. On by default. */
+  revealOnEnter?: boolean;
 };
 
 export function ParallaxImage({
@@ -26,6 +28,7 @@ export function ParallaxImage({
   sizes,
   priority = false,
   amount = 0.08,
+  revealOnEnter = true,
 }: ParallaxImageProps) {
   const frameRef = useRef<HTMLDivElement>(null);
   const layerRef = useRef<HTMLDivElement>(null);
@@ -51,10 +54,24 @@ export function ParallaxImage({
           },
         },
       );
+
+      if (revealOnEnter) {
+        const scrollTrigger = { trigger: frame, start: "top 85%", once: true };
+        gsap.fromTo(
+          frame,
+          { clipPath: "inset(0% 100% 0% 0%)" },
+          { clipPath: "inset(0% 0% 0% 0%)", duration: 1.3, ease: "power4.inOut", scrollTrigger },
+        );
+        gsap.fromTo(
+          layer,
+          { scale: 1.18 },
+          { scale: 1, duration: 1.6, ease: "power3.out", scrollTrigger },
+        );
+      }
     }, frame);
 
     return () => ctx.revert();
-  }, [amount]);
+  }, [amount, revealOnEnter]);
 
   const overscale = 1 + amount;
 
