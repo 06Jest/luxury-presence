@@ -52,7 +52,7 @@ export function SiteFooter() {
 
       <Container className="mt-14 border-t border-sand-50/15 pt-8">
         <p className="text-xs tracking-wide text-sand-50/50">
-          Copyright © {new Date().getFullYear()} Marci Metzger — All Rights Reserved
+          Copyright © {new Date().getFullYear()} Marci Metzger - All Rights Reserved
         </p>
       </Container>
     </footer>

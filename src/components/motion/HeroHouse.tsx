@@ -9,13 +9,13 @@ import { gsap } from "@/lib/gsap";
 import { prefersReducedMotion } from "@/lib/motion";
 
 /**
- * HeroHouse — a real-time 3D exterior architectural visualization.
+ * HeroHouse - a real-time 3D exterior architectural visualization.
  *
  * This replaces the earlier layered-SVG approach entirely: the house, tree,
  * rain, and lightning are genuine Three.js objects rendered through
  * react-three-fiber, not flat illustrations with fake depth.
  *
- * NEW DEPENDENCIES REQUIRED — not previously in this project:
+ * NEW DEPENDENCIES REQUIRED - not previously in this project:
  *   npm install three @react-three/fiber @react-three/drei
  *   npm install -D @types/three
  *
@@ -27,7 +27,7 @@ import { prefersReducedMotion } from "@/lib/motion";
  */
 
 // ---------------------------------------------------------------------------
-// Palette — Three.js materials can't consume this project's CSS custom
+// Palette - Three.js materials can't consume this project's CSS custom
 // properties at runtime, so these are the same desert/premium palette baked
 // as plain hex. Worth reconciling with the design system's real token
 // values once this is wired into the actual repo.
@@ -146,7 +146,7 @@ function WeatherClock({ weatherRef, reduceMotion }: { weatherRef: WeatherRef; re
 }
 
 // ---------------------------------------------------------------------------
-// Lighting + fog — this is what makes the house/tree/mountains actually
+// Lighting + fog - this is what makes the house/tree/mountains actually
 // "react to weather": everything else just sits under physically-based
 // materials and picks up whatever this casts.
 // ---------------------------------------------------------------------------
@@ -272,7 +272,7 @@ function Ground({ weatherRef }: { weatherRef: WeatherRef }) {
 }
 
 // ---------------------------------------------------------------------------
-// Windows — frame + glass + an independently-lit "interior glow" panel, so
+// Windows - frame + glass + an independently-lit "interior glow" panel, so
 // the house reads as inhabited without modeling an interior.
 // ---------------------------------------------------------------------------
 
@@ -312,7 +312,7 @@ function GlassWindow({
 }
 
 // ---------------------------------------------------------------------------
-// House — a real 3D asymmetric massing (garage + glass-walled living volume
+// House - a real 3D asymmetric massing (garage + glass-walled living volume
 // + cantilevered second floor + terrace), built from actual volumes so it
 // reads correctly from all 8 angles, not just the default camera position.
 // ---------------------------------------------------------------------------
@@ -320,7 +320,7 @@ function GlassWindow({
 function House({ weatherRef }: { weatherRef: WeatherRef }) {
   return (
     <group position={[0, 0, 0]}>
-      {/* GARAGE — single-story volume, left */}
+      {/* GARAGE - single-story volume, left */}
       <mesh position={[-2.9, 1.45, 0.1]} castShadow receiveShadow>
         <boxGeometry args={[3.4, 2.9, 3.4]} />
         <meshStandardMaterial color={CONCRETE} roughness={0.85} />
@@ -341,7 +341,7 @@ function House({ weatherRef }: { weatherRef: WeatherRef }) {
         <meshStandardMaterial color={CONCRETE_DARK} roughness={0.8} />
       </mesh>
 
-      {/* GROUND FLOOR — glass-walled living volume, right, deeper than the garage */}
+      {/* GROUND FLOOR - glass-walled living volume, right, deeper than the garage */}
       <mesh position={[1.1, 1.45, 0.1]} castShadow receiveShadow>
         <boxGeometry args={[4.6, 2.9, 4.2]} />
         <meshStandardMaterial color={CONCRETE} roughness={0.85} />
@@ -354,7 +354,7 @@ function House({ weatherRef }: { weatherRef: WeatherRef }) {
       </mesh>
       <GlassWindow weatherRef={weatherRef} position={[1.6, 1.6, -2.01]} size={[1.6, 1.4]} rotationY={Math.PI} />
 
-      {/* COVERED ENTRY — sits in the notch between the garage and the living volume */}
+      {/* COVERED ENTRY - sits in the notch between the garage and the living volume */}
       <mesh position={[-1.21, 1.05, 1.55]} rotation={[0, Math.PI / 2, 0]}>
         <boxGeometry args={[1.05, 2.1, 0.06]} />
         <meshStandardMaterial color={WOOD_DARK} roughness={0.6} />
@@ -372,7 +372,7 @@ function House({ weatherRef }: { weatherRef: WeatherRef }) {
         <meshStandardMaterial color={CONCRETE_DARK} roughness={0.9} />
       </mesh>
 
-      {/* SECOND FLOOR — cantilevered, offset wider/forward than the garage below it */}
+      {/* SECOND FLOOR - cantilevered, offset wider/forward than the garage below it */}
       <mesh position={[-2.15, 4.3, 0.3]} castShadow receiveShadow>
         <boxGeometry args={[5.5, 2.7, 3.4]} />
         <meshStandardMaterial color={CONCRETE} roughness={0.8} />
@@ -404,7 +404,7 @@ function House({ weatherRef }: { weatherRef: WeatherRef }) {
         <meshStandardMaterial color={METAL} roughness={0.4} metalness={0.4} />
       </mesh>
 
-      {/* ROOF — flat slab with real thickness and a visible overhang */}
+      {/* ROOF - flat slab with real thickness and a visible overhang */}
       <mesh position={[-2.15, 5.78, 0.3]} castShadow receiveShadow>
         <boxGeometry args={[6.0, 0.25, 3.9]} />
         <meshStandardMaterial color={METAL} roughness={0.5} metalness={0.2} />
@@ -418,7 +418,7 @@ function House({ weatherRef }: { weatherRef: WeatherRef }) {
 }
 
 // ---------------------------------------------------------------------------
-// Tree — procedural trunk + branches + foliage. No physics: each branch and
+// Tree - procedural trunk + branches + foliage. No physics: each branch and
 // foliage cluster just gets its own frequency/phase offset so the sway never
 // looks synchronized, scaled by the current wind strength.
 // ---------------------------------------------------------------------------
@@ -502,7 +502,7 @@ function Tree({ weatherRef, position }: { weatherRef: WeatherRef; position: [num
 }
 
 // ---------------------------------------------------------------------------
-// Rain — one instanced mesh. Density is controlled by shrinking/growing
+// Rain - one instanced mesh. Density is controlled by shrinking/growing
 // `mesh.count` each frame rather than toggling per-instance visibility, so
 // there's no per-instance branching cost.
 // ---------------------------------------------------------------------------
@@ -602,7 +602,7 @@ export function HeroHouse({ className = "" }: { className?: string }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [reduceMotion, setReduceMotion] = useState(false);
 
-  // Mutated in place every frame by WeatherClock — never via setState, so
+  // Mutated in place every frame by WeatherClock - never via setState, so
   // the weather cycle never triggers a React re-render.
   const weatherRef = useRef<WeatherState>({
     t: 0,

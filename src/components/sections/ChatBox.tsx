@@ -1,11 +1,11 @@
 "use client";
 
 /**
- * Chatbot.tsx — "Ask About Marci"
+ * Chatbot.tsx - "Ask About Marci"
  * ---------------------------------------------------------------------------
  * A floating AI-concierge chatbot for the Marci Metzger / The Ridge Realty
  * Group homepage. All answer content comes from `@/lib/marciKnowledge`,
- * which is the single controlled source of truth — this component never
+ * which is the single controlled source of truth - this component never
  * generates or invents text of its own, and never calls an external API.
  *
  * Note: imports assume the standard Next.js "@/*" -> "src/*" path alias.
@@ -99,7 +99,7 @@ export default function Chatbot() {
     };
   }, [isOpen]);
 
-  // Subtle GSAP entrance for the panel — opacity, translateY, slight scale.
+  // Subtle GSAP entrance for the panel - opacity, translateY, slight scale.
   // Respects prefers-reduced-motion, and cleans itself up on close/unmount.
   useEffect(() => {
     if (!isOpen || !panelRef.current) return;

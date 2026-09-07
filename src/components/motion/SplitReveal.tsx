@@ -14,7 +14,7 @@ type SplitRevealProps = {
 };
 
 /**
- * Masks each line/word behind an overflow-hidden clip and slides it up into place —
+ * Masks each line/word behind an overflow-hidden clip and slides it up into place -
  * a step beyond Reveal's block fade, used for the serif section headings.
  */
 export function SplitReveal({

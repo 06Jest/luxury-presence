@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Marci Metzger | Pahrump Realtor — The Ridge Realty Group",
+  title: "Marci Metzger | Pahrump Realtor - The Ridge Realty Group",
   description:
     "Marci Metzger, realtor for nearly 3 decades with The Ridge Realty Group in Pahrump, Nevada. Buying, selling, and finding a home you'll stay in for years.",
   icons: {

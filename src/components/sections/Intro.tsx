@@ -30,12 +30,12 @@ export function Intro() {
             Realtor for nearly three decades, in the valley she calls home.
           </h2>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-800">
-            Nobody knows the market like we do. Enjoy having a pro at your service — market
+            Nobody knows the market like we do. Enjoy having a pro at your service - market
             analysis, upgrades lists, contractors on speed dial, &amp; more.
           </p>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-500">
             We live, work, and play in this community, and we&rsquo;re happy to help you find
-            where to put your hard-earned dollars — whether you&rsquo;re buying your first
+            where to put your hard-earned dollars - whether you&rsquo;re buying your first
             place here or selling the one you&rsquo;ve loved for years.
           </p>
           <a

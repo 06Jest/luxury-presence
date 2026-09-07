@@ -5,19 +5,19 @@
  *
  * Every word the chatbot is allowed to say about Marci Metzger / The Ridge
  * Realty Group lives in this file. Nothing here should be added unless it is
- * actually supported by Marci's existing website and public profiles — do
+ * actually supported by Marci's existing website and public profiles - do
  * not invent listings, statistics, credentials, or personal details.
  *
  * The file is organized in five parts:
  *   1. Identity & contact constants
- *   2. KNOWLEDGE_BASE      — ~2,000 words of long-form, section-based source
+ *   2. KNOWLEDGE_BASE      - ~2,000 words of long-form, section-based source
  *                             material (the thing a human editor would review)
- *   3. KNOWLEDGE_TOPICS     — short, conversational answers used in chat,
+ *   3. KNOWLEDGE_TOPICS     - short, conversational answers used in chat,
  *                             each explicitly tagged with the KNOWLEDGE_BASE
  *                             section it summarizes
- *   4. Guardrails           — fixed, safe responses for anything the
+ *   4. Guardrails           - fixed, safe responses for anything the
  *                             chatbot must refuse or redirect
- *   5. getMarciResponse()   — the lightweight, deterministic matching engine
+ *   5. getMarciResponse()   - the lightweight, deterministic matching engine
  *                             that the Chatbot component calls. No network
  *                             requests, no external AI API, no invented text.
  * ---------------------------------------------------------------------------
@@ -27,7 +27,7 @@
 // 1. IDENTITY & CONTACT
 // ============================================================================
 
-/** How the chatbot must always refer to itself — never "Marci" and never a
+/** How the chatbot must always refer to itself - never "Marci" and never a
  * generic assistant name. */
 export const ASSISTANT_NAME = "Marci's AI assistant";
 
@@ -43,11 +43,11 @@ export const CONTACT = {
 } as const;
 
 /** Hard cap on user questions per session. Enforced in Chatbot.tsx via
- * React state — this constant is the single place that number is defined. */
+ * React state - this constant is the single place that number is defined. */
 export const MAX_QUESTIONS = 5;
 
 // ============================================================================
-// 2. KNOWLEDGE_BASE — long-form source material (~2,000 words)
+// 2. KNOWLEDGE_BASE - long-form source material (~2,000 words)
 // ============================================================================
 
 export interface KnowledgeSection {
@@ -125,7 +125,7 @@ export const KNOWLEDGE_BASE: KnowledgeSection[] = [
 ];
 
 // ============================================================================
-// 3. KNOWLEDGE_TOPICS — short chat answers, each grounded in KNOWLEDGE_BASE
+// 3. KNOWLEDGE_TOPICS - short chat answers, each grounded in KNOWLEDGE_BASE
 // ============================================================================
 
 export interface KnowledgeTopic {
@@ -180,7 +180,7 @@ export const KNOWLEDGE_TOPICS: KnowledgeTopic[] = [
       "how experienced",
     ],
     answer:
-      "Marci has been a REALTOR for nearly three decades, starting her career in Washington State in 1995 before bringing that experience to Pahrump, Nevada. She and her team at The Ridge Realty Group have been recognized as a Top Residential Sales team in recent years — in 2021 alone, they helped nearly 90 clients and closed about $28.5 million in sales.\n\nThat track record connects to Marci's \"Get It Sold\" approach: getting a property not just listed, but actually sold, for the best outcome she can get her client. These figures reflect past results, not a promise about any future sale.",
+      "Marci has been a REALTOR for nearly three decades, starting her career in Washington State in 1995 before bringing that experience to Pahrump, Nevada. She and her team at The Ridge Realty Group have been recognized as a Top Residential Sales team in recent years - in 2021 alone, they helped nearly 90 clients and closed about $28.5 million in sales.\n\nThat track record connects to Marci's \"Get It Sold\" approach: getting a property not just listed, but actually sold, for the best outcome she can get her client. These figures reflect past results, not a promise about any future sale.",
   },
   {
     id: "selling",
@@ -202,7 +202,7 @@ export const KNOWLEDGE_TOPICS: KnowledgeTopic[] = [
       "positioning",
     ],
     answer:
-      "Marci's philosophy is right there on her site: \"Don't Just List it... Get it SOLD!\" She works to give listings strong marketing and exposure so they reach as many qualified buyers as possible, rather than sitting quietly on the market.\n\nBefore a home goes live, Marci helps sellers prepare the property, understand current market conditions, and position it well against similar homes nearby — and she stays involved all the way through closing. She won't promise a specific price or timeline, though; those depend on your property and the market, and are best discussed directly with her.",
+      "Marci's philosophy is right there on her site: \"Don't Just List it... Get it SOLD!\" She works to give listings strong marketing and exposure so they reach as many qualified buyers as possible, rather than sitting quietly on the market.\n\nBefore a home goes live, Marci helps sellers prepare the property, understand current market conditions, and position it well against similar homes nearby - and she stays involved all the way through closing. She won't promise a specific price or timeline, though; those depend on your property and the market, and are best discussed directly with her.",
   },
   {
     id: "buying",
@@ -225,7 +225,7 @@ export const KNOWLEDGE_TOPICS: KnowledgeTopic[] = [
       "looking for a home",
     ],
     answer:
-      "Marci calls her approach to buyers a \"Guide to Buyers\": helping people understand the market, providing market analysis, and helping them find and evaluate homes that fit — everything from fixer-uppers to move-in-ready homes, condos to larger properties.\n\nShe also helps buyers think through upgrades a home might need and can connect them with contractors, and for questions on affordability, credit, or loan options, she connects buyers with trusted lending professionals. Marci's AI assistant can't give mortgage or financial advice directly, but Marci can point you to the right people.",
+      "Marci calls her approach to buyers a \"Guide to Buyers\": helping people understand the market, providing market analysis, and helping them find and evaluate homes that fit - everything from fixer-uppers to move-in-ready homes, condos to larger properties.\n\nShe also helps buyers think through upgrades a home might need and can connect them with contractors, and for questions on affordability, credit, or loan options, she connects buyers with trusted lending professionals. Marci's AI assistant can't give mortgage or financial advice directly, but Marci can point you to the right people.",
   },
   {
     id: "services",
@@ -244,7 +244,7 @@ export const KNOWLEDGE_TOPICS: KnowledgeTopic[] = [
       "what kind of real estate",
     ],
     answer:
-      "Marci and The Ridge Realty Group work across both residential and commercial real estate in Pahrump and Southern Nevada — everything from helping clients buy and sell homes of all sizes to assisting with investment or commercial property opportunities.\n\nAcross both, her core services stay the same: guiding clients through buying and selling, offering market guidance, helping with property search, and applying nearly three decades of market expertise to help clients move forward with confidence.",
+      "Marci and The Ridge Realty Group work across both residential and commercial real estate in Pahrump and Southern Nevada - everything from helping clients buy and sell homes of all sizes to assisting with investment or commercial property opportunities.\n\nAcross both, her core services stay the same: guiding clients through buying and selling, offering market guidance, helping with property search, and applying nearly three decades of market expertise to help clients move forward with confidence.",
   },
   {
     id: "contact",
@@ -269,7 +269,7 @@ export const KNOWLEDGE_TOPICS: KnowledgeTopic[] = [
 ];
 
 // ============================================================================
-// 4. GUARDRAILS — fixed, safe responses
+// 4. GUARDRAILS - fixed, safe responses
 // ============================================================================
 
 const JAILBREAK_KEYWORDS = [
@@ -380,16 +380,16 @@ export const JAILBREAK_RESPONSE =
 
 export const PRIVATE_INFO_RESPONSE = `I can only share what's part of Marci's public professional profile, so I'm not able to get into personal details like that. For anything more, it's best to reach Marci directly at ${CONTACT.phoneDisplay}.`;
 
-export const ADVICE_GUARDRAIL_RESPONSE = `That's a bit outside what I can help with — I'm Marci's AI assistant, not a lawyer, accountant, or lender, so I can't give legal, tax, or financial advice, or guarantee a valuation, sale price, closing date, or financing. Marci can point you to the right professional, or you can reach her directly at ${CONTACT.phoneDisplay}.`;
+export const ADVICE_GUARDRAIL_RESPONSE = `That's a bit outside what I can help with - I'm Marci's AI assistant, not a lawyer, accountant, or lender, so I can't give legal, tax, or financial advice, or guarantee a valuation, sale price, closing date, or financing. Marci can point you to the right professional, or you can reach her directly at ${CONTACT.phoneDisplay}.`;
 
-export const IDENTITY_RESPONSE = `I'm Marci's AI assistant, not Marci herself — I'm here to help answer questions about her experience and services. To talk with Marci directly, you can reach her at ${CONTACT.phoneDisplay}.`;
+export const IDENTITY_RESPONSE = `I'm Marci's AI assistant, not Marci herself - I'm here to help answer questions about her experience and services. To talk with Marci directly, you can reach her at ${CONTACT.phoneDisplay}.`;
 
 export const GREETING_RESPONSE = `Hi there! I'm ${ASSISTANT_NAME}. Ask me about Marci's experience, how she helps buyers and sellers, or how to get in touch.`;
 
-export const THANKS_RESPONSE = `You're welcome! If anything else comes up, I'm happy to help — or you can always reach Marci directly at ${CONTACT.phoneDisplay}.`;
+export const THANKS_RESPONSE = `You're welcome! If anything else comes up, I'm happy to help - or you can always reach Marci directly at ${CONTACT.phoneDisplay}.`;
 
 // ============================================================================
-// 5. MATCHING ENGINE — lightweight, deterministic, no network calls
+// 5. MATCHING ENGINE - lightweight, deterministic, no network calls
 // ============================================================================
 
 function normalize(input: string): string {
@@ -440,7 +440,7 @@ export interface MarciResponse {
 
 /**
  * The only function the Chatbot component needs to call. Deterministic,
- * synchronous, and entirely local — no API key, no network request, no
+ * synchronous, and entirely local - no API key, no network request, no
  * text generated outside of this file's fixed strings.
  */
 export function getMarciResponse(rawInput: string): MarciResponse {

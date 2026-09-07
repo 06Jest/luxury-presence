@@ -1,4 +1,4 @@
-# Marci Metzger — The Ridge Realty Group
+# Marci Metzger - The Ridge Realty Group
 
 A premium, interactive redesign of the Marci Metzger / The Ridge Realty Group homepage, created as a Junior Web Builder application project for Luxury Presence.
 
@@ -272,7 +272,7 @@ The project includes several accessibility and performance considerations:
 
 Original business content and photography:
 
-**Marci Metzger — The Ridge Realty Group**
+**Marci Metzger - The Ridge Realty Group**
 
 3190 HW-160 Suite F
 Pahrump, NV 89048

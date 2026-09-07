@@ -59,7 +59,7 @@ export function PropertySearch() {
         </h2>
         <p className="mt-6 text-lg leading-relaxed text-ink-500">
           Set your criteria and Marci will walk you through everything on the market that
-          fits — including the homes that haven&rsquo;t hit the listing sites yet.
+          fits - including the homes that haven&rsquo;t hit the listing sites yet.
         </p>
       </Reveal>
 
@@ -135,7 +135,7 @@ export function PropertySearch() {
             {summary ? (
               <>
                 Searching for {summary}. Listing results aren&rsquo;t connected to this site
-                yet —{" "}
+                yet -{" "}
                 <a
                   href={site.phone.href}
                   className="text-ink-900 underline decoration-clay-400 underline-offset-4 hover:text-terracotta-600"

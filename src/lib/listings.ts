@@ -1,5 +1,5 @@
 /**
- * The /listings route does not exist yet — flip this once a listings feed is wired up
+ * The /listings route does not exist yet - flip this once a listings feed is wired up
  * and the search form will navigate instead of summarising the criteria in place.
  */
 export const LISTINGS_ROUTE_ENABLED = false;
@@ -90,7 +90,7 @@ function formatPrice(value: string): string | null {
   });
 }
 
-/** Plain-language echo of the chosen criteria — no results are implied. */
+/** Plain-language echo of the chosen criteria - no results are implied. */
 export function describeFilters(filters: SearchFilters): string {
   const qualifiers: string[] = [];
   if (filters.bedrooms !== bedroomOptions[0]) {

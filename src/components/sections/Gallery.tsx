@@ -19,7 +19,7 @@ import { prefersReducedMotion } from "@/lib/motion";
 import { gallery } from "@/lib/site";
 
 /**
- * Gallery — "The valley, up close."
+ * Gallery - "The valley, up close."
  *
  * One large featured photograph with a horizontal film-strip of the
  * remaining images underneath. Changing the featured image plays a single
@@ -115,7 +115,7 @@ function GalleryStage({
   }, [activeIndex, total, reduceMotion]);
 
   // Subtle scroll parallax, disabled under reduced motion. Purely a transform
-  // driven by scroll position — never overrides native scrolling.
+  // driven by scroll position - never overrides native scrolling.
   useIsomorphicLayoutEffect(() => {
     const stage = stageRef.current;
     if (!stage || reduceMotion) return undefined;
@@ -308,7 +308,7 @@ export function Gallery() {
   const prev = useCallback(() => goTo(activeIndex - 1), [activeIndex, goTo]);
   const openLightbox = useCallback(() => setLightboxIndex(activeIndex), [activeIndex]);
 
-  // Arrow-key navigation for the gallery itself — yields entirely to the
+  // Arrow-key navigation for the gallery itself - yields entirely to the
   // Lightbox's own keyboard handling while it's open, and ignores keys typed
   // into any text field elsewhere on the page (e.g. Search).
   useEffect(() => {

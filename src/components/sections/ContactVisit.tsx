@@ -94,7 +94,7 @@ export function ContactVisit() {
     try {
       // There is no backend in this build. This pause only mirrors the time
       // a real submission would take, so the interaction still feels
-      // considered rather than instant — it does not send anything.
+      // considered rather than instant - it does not send anything.
       await new Promise((resolve) => setTimeout(resolve, 600));
       setValues(EMPTY_VALUES);
       setStatus("success");
