@@ -231,18 +231,6 @@ function GalleryFilmstrip({
   reduceMotion: boolean;
   onSelect: (index: number) => void;
 }) {
-  const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
-
-  useEffect(() => {
-    const el = itemRefs.current[activeIndex];
-    if (!el) return;
-    el.scrollIntoView({
-      behavior: reduceMotion ? "auto" : "smooth",
-      inline: "center",
-      block: "nearest",
-    });
-  }, [activeIndex, reduceMotion]);
-
   return (
     <div
       className="mt-6 flex gap-3 overflow-x-auto pb-2 sm:mt-8 sm:gap-4"
@@ -253,9 +241,6 @@ function GalleryFilmstrip({
         return (
           <button
             key={image.src}
-            ref={(el) => {
-              itemRefs.current[i] = el;
-            }}
             type="button"
             onClick={() => onSelect(i)}
             aria-current={active}
